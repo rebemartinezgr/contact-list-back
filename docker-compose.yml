@@ -14,7 +14,7 @@ services:
         environment:
             WWWUSER: '${WWWUSER}'
             LARAVEL_SAIL: 1
-            PHP_IDE_CONFIG: serverName=factorial-test
+            PHP_IDE_CONFIG: serverName=contact-list-back
         volumes:
             - '.:/var/www/html'
         networks:

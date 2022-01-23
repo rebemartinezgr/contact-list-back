@@ -7,7 +7,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-# Clean skeleton
+# Contact list: Backend application
 
 ## **Requirements**
 
@@ -21,12 +21,31 @@
     ./vendor/bin/sail up -d
     ```
 
-- Access to the following url in order to check the installation:
+## **Check setup**
+
+- To ensure the application is running at this point, access to the following url on your browser
 
     ```php
     http://127.0.0.1:8000
     ```
 
+## **Data migration**
+
+In order to migrate necessary application data, run the following commands on a terminal:
+
+```php
+./vendor/bin/sail artisan migrate:install
+./vendor/bin/sail artisan migrate:fresh
+./vendor/bin/sail artisan db:seed ContactSeeder
+```
+
+## **Run Tests**
+To run the application tests execute the command:
+
+```php
+./vendor/bin/sail artisan test
+```
+Please take into account that running integration test will truncate the database tables.
 ## Uninstall
 If you want to uninstall and clean the environment you can run
 
